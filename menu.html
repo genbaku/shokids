@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shokids | Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <div class="sidebar">
+            <div class="logo">SHOKIDS</div>
+        </div>
+
+        <div class="main-content">
+            <h1 id="menuTitle" style="font-size: 2.5rem; margin-bottom: 8px; color: var(--brand-blue);">Menu</h1>
+            <p id="allergyWarning"
+                style="color: var(--brand-pink); font-weight: 600; margin-bottom: 24px; font-size: 0.9rem;"></p>
+
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search meals...">
+
+            <div id="subscriptionBanner"
+                style="background: var(--brand-blue); padding: 20px; border-radius: 16px; color: white; justify-content: space-between; align-items: center; margin-bottom: 24px; display: none;">
+                <div>
+                    <h4 style="margin-bottom: 4px; font-family: 'Fredoka One', cursive; font-weight: normal;">Weekly
+                        Subscription</h4>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Automate your custom menu.</p>
+                </div>
+                <button class="btn btn-pink" style="width: auto; padding: 10px 20px; font-size: 0.9rem;"
+                    onclick="startSubscriptionBuild()">Create Plan</button>
+            </div>
+
+            <div class="shop-grid" id="menuContainer"></div>
+        </div>
+    </div>
+
+    <div class="floating-cart" id="floatingCart">
+        <div>
+            <div id="cartLabel" style="font-size: 0.85rem; color: #b3b3b3;">0 items</div>
+            <div id="cartTotal" style="font-size: 1.2rem; font-weight: 700;">€0.00</div>
+        </div>
+        <button id="cartActionBtn" class="btn btn-pink" onclick="processCart()">Place Order</button>
+    </div>
+
+    <div class="modal-overlay" id="mealModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('mealModal')">×</button>
+            <div id="modalArt" class="modal-art-large"></div>
+            <div id="modalCategory" class="modal-badge">Category</div>
+            <h2 id="modalName" style="margin-bottom: 8px; font-size: 2rem; color: var(--brand-blue);">Meal Name</h2>
+            <p id="modalPrice"
+                style="font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; color: var(--brand-pink);">€0.00</p>
+
+            <h3 style="font-size: 1.2rem; margin-bottom: 8px; color: var(--brand-blue);">Ingredients</h3>
+            <p id="modalIngredients" style="color: var(--text-muted); margin-bottom: 32px;"></p>
+
+            <button id="modalAddBtn" class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="profile.html" class="nav-link">Profile</a>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

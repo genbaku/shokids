@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shokids | Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <div class="sidebar">
+            <div class="logo">SHOKIDS</div>
+        </div>
+
+        <div class="main-content">
+            <h1 style="font-size: 2.5rem; margin-bottom: 32px; color: var(--brand-blue);">Profile</h1>
+
+            <h3 style="color: var(--brand-blue); margin-bottom: 16px;">Personal Info</h3>
+            <div class="settings-item" style="margin-bottom: 32px; cursor: default;">
+                <div class="settings-info">
+                    <h4 style="color: var(--brand-blue);">Parent Name</h4>
+                    <p style="margin-bottom: 16px;">Jane Doe</p>
+                    <h4 style="color: var(--brand-blue);">Email Address</h4>
+                    <p>jane.doe@example.com</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--brand-blue); margin-bottom: 16px;">Subscription</h3>
+
+            <div id="noSubSection" class="settings-list" style="margin-bottom: 32px;">
+                <button class="btn btn-pink" onclick="createSubscription()">Create Weekly Subscription</button>
+            </div>
+
+            <div id="activeSubSection" class="settings-list" style="margin-bottom: 32px; display: none;">
+                <div class="settings-item"
+                    style="cursor: default; border-left: 6px solid var(--brand-pink); flex-direction: column; align-items: flex-start;">
+                    <div class="settings-info" style="width: 100%;">
+                        <h4 style="color: var(--brand-blue);">Weekly Menu Active</h4>
+                        <p id="subItemsList"
+                            style="margin-top: 8px; color: var(--text-main); font-weight: 600; line-height: 1.8;"></p>
+                        <p id="subTotalDisplay" style="margin-top: 12px; color: var(--brand-pink); font-weight: 700;">
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn-danger" onclick="openCancelModal()">Cancel Subscription</button>
+            </div>
+
+            <h3 style="color: var(--brand-blue); margin-bottom: 16px;">Child Settings</h3>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <h4 style="margin-bottom: 8px; color: var(--brand-blue); font-family: 'Inter', sans-serif;">Active Menu
+                    Configuration</h4>
+                <p id="planDisplay" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 4px;"></p>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Allergies Avoided: <span
+                        id="allergyDisplay" style="color: var(--brand-pink); font-weight: 600;"></span></p>
+                <a href="onboarding.html" class="btn btn-outline" style="max-width: 200px;">Edit Preferences</a>
+            </div>
+
+            <button class="btn" style="background: transparent; color: var(--text-muted); margin-top: 40px;"
+                onclick="window.location.href='index.html'">Log Out</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cancelModal">
+        <div class="modal-content" style="text-align: center; padding-top: 48px;">
+            <h2 style="margin-bottom: 12px; color: var(--brand-blue);">Cancel Subscription?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px;">Are you sure you want to stop your weekly
+                deliveries? Your custom plan will be removed.</p>
+
+            <div style="display: flex; gap: 16px;">
+                <button class="btn btn-outline" onclick="closeCancelModal()">Keep It</button>
+                <button class="btn btn-danger" onclick="confirmCancel()">Yes, Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="profile.html" class="nav-link active">Profile</a>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

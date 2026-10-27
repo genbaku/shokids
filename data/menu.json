@@ -4,7 +4,7 @@
         "name": "Sweet Potato & Carrot Mash",
         "category": "baby",
         "price": 3.50,
-        "theme": "#ffb6c1",
+        "image": "https://hangrymiss.com/wp-content/uploads/carrot-sweet-potato-swede-pumpkin-mash-8.jpg",
         "ingredients": "Organic Sweet Potato, Organic Carrot, Water.",
         "allergens": []
     },
@@ -13,7 +13,7 @@
         "name": "Apple & Spinach Puree",
         "category": "baby",
         "price": 3.50,
-        "theme": "#a8e6cf",
+        "image": "https://babyfoode.com/wp-content/uploads/2017/04/spinach_apple_baby_food-7.jpg",
         "ingredients": "Organic Apple, Organic Spinach, Splash of Lemon Juice.",
         "allergens": []
     },
@@ -22,7 +22,7 @@
         "name": "Banana & Avocado Blend",
         "category": "baby",
         "price": 3.50,
-        "theme": "#ffd3b6",
+        "image": "https://getmyblend.com/cdn/shop/articles/variant-2_b396c357-5ec7-4792-a226-95c97c62716e.jpg?v=1779788789&width=1400",
         "ingredients": "Organic Banana, Hass Avocado.",
         "allergens": []
     },
@@ -31,7 +31,7 @@
         "name": "Mango & Peach Delight",
         "category": "baby",
         "price": 4.00,
-        "theme": "#ffdfba",
+        "image": "https://www.sidechef.com/recipe/473201a1-e1fb-4b48-b608-8278cedc7848.jpg?d=1408x1120",
         "ingredients": "Organic Mango, Organic Peach.",
         "allergens": []
     },
@@ -40,7 +40,7 @@
         "name": "Pea & Zucchini Smash",
         "category": "baby",
         "price": 3.00,
-        "theme": "#baffc9",
+        "image": "https://www.tasteofhome.com/wp-content/uploads/2025/08/Smashed-Zucchini-Dip_TOHD25_280695_SarahTramonte_4.jpg?fit=700%2C1024",
         "ingredients": "Green Peas, Zucchini, Mint.",
         "allergens": []
     },
@@ -49,7 +49,7 @@
         "name": "Oatmeal & Berry Mush",
         "category": "baby",
         "price": 4.50,
-        "theme": "#ffb3ba",
+        "image": "https://www.wifemamafoodie.com/wp-content/uploads/2017/01/Creamy-Mixed-Berry-Oatmeal-overhead.jpg",
         "ingredients": "Rolled Oats, Mixed Berries, Water.",
         "allergens": [
             "wheat"
@@ -60,7 +60,7 @@
         "name": "Butternut Squash Puree",
         "category": "baby",
         "price": 3.50,
-        "theme": "#ffdfba",
+        "image": "https://www.seriouseats.com/thmb/ifgg8ftCWIK7u6xLyW4YJGgI-Pg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20211115-Butternut-Squash-Puree-Jillian-Atkinson_Hero1-53daf3a1984a4a4198e86a0aa415baa5.jpg",
         "ingredients": "Roasted Butternut Squash.",
         "allergens": []
     },
@@ -69,7 +69,7 @@
         "name": "Pear & Prune Blend",
         "category": "baby",
         "price": 3.50,
-        "theme": "#e0bbe4",
+        "image": "https://www.fearlessdining.com/wp-content/uploads/2017/11/pear-smoothie-bowl-hero-500x500.jpg",
         "ingredients": "Organic Pear, Dried Prunes.",
         "allergens": []
     },
@@ -78,7 +78,7 @@
         "name": "Mac & Cheese with Hidden Veg",
         "category": "toddler",
         "price": 5.50,
-        "theme": "#ffb6c1",
+        "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&h=400&fit=crop",
         "ingredients": "Macaroni, Cheddar Cheese, Cauliflower Puree, Milk.",
         "allergens": [
             "wheat",
@@ -90,7 +90,7 @@
         "name": "Turkey Meatballs & Quinoa",
         "category": "toddler",
         "price": 6.00,
-        "theme": "#ff8b94",
+        "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=400&h=400&fit=crop",
         "ingredients": "Ground Turkey, Quinoa, Tomato Sauce, Garlic.",
         "allergens": []
     },
@@ -99,7 +99,7 @@
         "name": "Chicken & Broccoli Bites",
         "category": "toddler",
         "price": 5.50,
-        "theme": "#a8e6cf",
+        "image": "https://thedomesticman.com/wp-content/uploads/2015/12/img_08631.jpg?w=800",
         "ingredients": "Minced Chicken, Broccoli, Egg, Breadcrumbs.",
         "allergens": [
             "egg",
@@ -111,7 +111,7 @@
         "name": "Mini Sweet Potato Pancakes",
         "category": "toddler",
         "price": 5.00,
-        "theme": "#ffd3b6",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400&h=400&fit=crop",
         "ingredients": "Sweet Potato, Egg, Oat Flour, Cinnamon.",
         "allergens": [
             "egg",
@@ -123,7 +123,7 @@
         "name": "Veggie Dinosaur Nuggets",
         "category": "toddler",
         "price": 6.50,
-        "theme": "#baffc9",
+        "image": "https://media.annabelkarmel.com/2025/11/veggie-Dinosaur-Nuggets-min-scaled.jpg",
         "ingredients": "Potato, Carrots, Peas, Corn, Soy Protein.",
         "allergens": [
             "soy"
@@ -134,7 +134,7 @@
         "name": "Cheesy Pasta Stars",
         "category": "toddler",
         "price": 5.00,
-        "theme": "#ffdfba",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSFRL5sI42_SzpEfVmgFxxHsNaVwJxpxiV9Jtks-nvcsAwCoqsatsR8QI&s=10",
         "ingredients": "Star Pasta, Parmesan, Butter.",
         "allergens": [
             "wheat",
@@ -146,7 +146,7 @@
         "name": "Mini Rice Balls",
         "category": "toddler",
         "price": 4.50,
-        "theme": "#ffffba",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc0Ndnz7VfJiGKfGym5ZOtxwJiYyY5mrKUBxgfMCoL__IKQJX3woO0VhI&s=10",
         "ingredients": "Sushi Rice, Sesame Oil, Seaweed.",
         "allergens": [
             "sesame"
@@ -157,7 +157,7 @@
         "name": "Carrot & Apple Muffins",
         "category": "toddler",
         "price": 4.00,
-        "theme": "#ffb3ba",
+        "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=400&fit=crop",
         "ingredients": "Carrot, Apple, Flour, Egg, Almond Milk.",
         "allergens": [
             "wheat",
@@ -170,7 +170,7 @@
         "name": "Teriyaki Salmon & Rice",
         "category": "bigkid",
         "price": 7.50,
-        "theme": "#ff8b94",
+        "image": "https://thewoodenskillet.com/wp-content/uploads/2025/07/teriyaki-salmon-rice-bowl-recipe-3.jpg",
         "ingredients": "Salmon, White Rice, Soy Sauce, Ginger, Broccoli.",
         "allergens": [
             "fish",
@@ -182,7 +182,7 @@
         "name": "Build-a-Taco Bowl",
         "category": "bigkid",
         "price": 7.00,
-        "theme": "#ffd3b6",
+        "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=400&h=400&fit=crop",
         "ingredients": "Ground Beef, Black Beans, Corn, Cheese, Rice.",
         "allergens": [
             "dairy"
@@ -193,7 +193,7 @@
         "name": "Veggie Packed Pasta Bake",
         "category": "bigkid",
         "price": 6.50,
-        "theme": "#a8e6cf",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYB2tYVMKwrNrjkZbVRIByGd68RlJ3imEnmSsh7vJC-7wBTW6Y9B-NKRDu&s=10",
         "ingredients": "Penne, Zucchini, Bell Pepper, Mozzarella, Tomato.",
         "allergens": [
             "wheat",
@@ -205,7 +205,7 @@
         "name": "Chicken & Veggie Wrap",
         "category": "bigkid",
         "price": 7.00,
-        "theme": "#ffdfba",
+        "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=400&fit=crop",
         "ingredients": "Grilled Chicken, Spinach, Tortilla, Hummus.",
         "allergens": [
             "wheat",
@@ -217,7 +217,7 @@
         "name": "Mini Beef Stew",
         "category": "bigkid",
         "price": 8.00,
-        "theme": "#ffb3ba",
+        "image": "https://www.allrecipes.com/thmb/75g5mA_cF5ZPPYQXqBsrUz86_xc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25200slow-cooker-beef-stew-ivFranceCvideo4x2-ab73779405884ac5a1bb5687e1d42525.jpg",
         "ingredients": "Beef chunks, Potatoes, Carrots, Celery, Beef Broth.",
         "allergens": []
     },
@@ -226,7 +226,7 @@
         "name": "Tofu Stir-fry Noodles",
         "category": "bigkid",
         "price": 6.50,
-        "theme": "#baffc9",
+        "image": "https://www.thissavoryvegan.com/wp-content/uploads/2023/08/crispy-tofu-veggie-stir-fry-3.jpg",
         "ingredients": "Firm Tofu, Rice Noodles, Soy Sauce, Snap Peas, Peanut garnish.",
         "allergens": [
             "soy",
@@ -238,7 +238,7 @@
         "name": "Baked Fish Sticks & Peas",
         "category": "bigkid",
         "price": 7.50,
-        "theme": "#bae1ff",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3pBaVjXNvMrnu1XL-hRhc3RUVbaGE0SKYi4hq-e4bPUNvex1gkHX2_Yfs&s=10",
         "ingredients": "Cod, Breadcrumbs, Egg, Green Peas.",
         "allergens": [
             "fish",
@@ -251,7 +251,7 @@
         "name": "Turkey Sliders",
         "category": "bigkid",
         "price": 8.00,
-        "theme": "#ffb3ba",
+        "image": "https://showmetheyummy.com/wp-content/uploads/2021/11/Turkey-Sliders-Show-Me-the-Yummy-Google-Thumb-Retina-3.jpg",
         "ingredients": "Turkey Patties, Mini Wheat Buns, Cheddar.",
         "allergens": [
             "wheat",
@@ -263,7 +263,7 @@
         "name": "Strawberry Oat Smoothie",
         "category": "bigkid",
         "price": 4.50,
-        "theme": "#ffb6c1",
+        "image": "https://lilluna.com/wp-content/uploads/2018/01/strawberry-oat-smoothie-resize-1.jpg",
         "ingredients": "Strawberries, Oat Milk, Banana, Chia Seeds.",
         "allergens": []
     }

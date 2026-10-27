@@ -11,7 +11,10 @@
 <body>
     <div class="layout-wrapper">
         <div class="sidebar">
-            <div class="logo">SHOKIDS</div>
+            <div class="header-branding">
+                <div class="logo">SHOKIDS</div>
+                <img src="images/cook.png" alt="Mascot" class="mascot-img">
+            </div>
         </div>
 
         <div class="main-content">
@@ -47,7 +50,9 @@
     <div class="modal-overlay" id="mealModal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal('mealModal')">×</button>
-            <div id="modalArt" class="modal-art-large"></div>
+
+            <img id="modalArt" class="modal-art-large" src="" alt="Meal Image">
+
             <div id="modalCategory" class="modal-badge">Category</div>
             <h2 id="modalName" style="margin-bottom: 8px; font-size: 2rem; color: var(--brand-blue);">Meal Name</h2>
             <p id="modalPrice"

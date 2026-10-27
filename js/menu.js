@@ -48,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement('div');
             card.className = 'meal-card';
             card.onclick = () => openMealModal(meal);
+            
+            // CHANGED: Generating an actual <img> tag pulling the image URL from JSON
             card.innerHTML = `
-                <div class="meal-art" style="background-color: ${meal.theme};"></div>
+                <img src="${meal.image}" alt="${meal.name}" class="meal-art" loading="lazy">
                 <div class="meal-info">
                     <h4>${meal.name}</h4>
                     <p>€${meal.price.toFixed(2)}</p>
@@ -61,18 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-window.startSubscriptionBuild = function () {
+window.startSubscriptionBuild = function() {
     localStorage.setItem('shokids_build_mode', 'subscription');
     location.reload();
 };
 
-window.openMealModal = function (meal) {
-    document.getElementById('modalArt').style.backgroundColor = meal.theme;
+window.openMealModal = function(meal) {
+    document.getElementById('modalArt').src = meal.image;
     document.getElementById('modalCategory').innerText = meal.category.toUpperCase();
     document.getElementById('modalName').innerText = meal.name;
     document.getElementById('modalPrice').innerText = `€${meal.price.toFixed(2)}`;
     document.getElementById('modalIngredients').innerText = meal.ingredients;
-
+    
     const addBtn = document.getElementById('modalAddBtn');
     addBtn.onclick = () => {
         addToCart(meal.id);
@@ -82,23 +84,23 @@ window.openMealModal = function (meal) {
     document.getElementById('mealModal').classList.add('active');
 };
 
-window.closeModal = function (modalId) {
+window.closeModal = function(modalId) {
     document.getElementById(modalId).classList.remove('active');
 };
 
-window.addToCart = function (id) {
+window.addToCart = function(id) {
     const meal = allMeals.find(m => m.id === id);
     if (!meal) return;
 
     cartItems.push({ id: meal.id, name: meal.name, price: meal.price });
     cartTotal += meal.price;
-
+    
     document.getElementById('cartLabel').innerText = `${cartItems.length} items`;
     document.getElementById('cartTotal').innerText = `€${cartTotal.toFixed(2)}`;
     document.getElementById('floatingCart').classList.add('active');
 };
 
-window.processCart = function () {
+window.processCart = function() {
     if (isSubMode) {
         localStorage.setItem('shokids_subscription', 'true');
         localStorage.setItem('shokids_sub_total', cartTotal.toFixed(2));

@@ -12,6 +12,7 @@ document.getElementById('onboardingForm').addEventListener('submit', function (e
     localStorage.removeItem('shokids_subscription');
     localStorage.removeItem('shokids_sub_items');
     localStorage.removeItem('shokids_sub_total');
+    localStorage.removeItem('shokids_discount_used');
 
     window.location.href = 'menu.html';
 });

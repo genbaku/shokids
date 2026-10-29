@@ -3,6 +3,8 @@ let cartTotal = 0;
 let allMeals = [];
 let isSubMode = localStorage.getItem('shokids_build_mode') === 'subscription';
 
+let hasUsedDiscount = localStorage.getItem('shokids_discount_used') === 'true';
+
 document.addEventListener("DOMContentLoaded", () => {
     const ageGroup = localStorage.getItem('shokids_age') || 'toddler';
     const userAllergies = JSON.parse(localStorage.getItem('shokids_allergies')) || [];
@@ -48,8 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement('div');
             card.className = 'meal-card';
             card.onclick = () => openMealModal(meal);
-            
-            // CHANGED: Generating an actual <img> tag pulling the image URL from JSON
             card.innerHTML = `
                 <img src="${meal.image}" alt="${meal.name}" class="meal-art" loading="lazy">
                 <div class="meal-info">
@@ -63,18 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-window.startSubscriptionBuild = function() {
+window.startSubscriptionBuild = function () {
     localStorage.setItem('shokids_build_mode', 'subscription');
     location.reload();
 };
 
-window.openMealModal = function(meal) {
+window.openMealModal = function (meal) {
     document.getElementById('modalArt').src = meal.image;
     document.getElementById('modalCategory').innerText = meal.category.toUpperCase();
     document.getElementById('modalName').innerText = meal.name;
     document.getElementById('modalPrice').innerText = `€${meal.price.toFixed(2)}`;
     document.getElementById('modalIngredients').innerText = meal.ingredients;
-    
+
     const addBtn = document.getElementById('modalAddBtn');
     addBtn.onclick = () => {
         addToCart(meal.id);
@@ -84,32 +84,52 @@ window.openMealModal = function(meal) {
     document.getElementById('mealModal').classList.add('active');
 };
 
-window.closeModal = function(modalId) {
+window.closeModal = function (modalId) {
     document.getElementById(modalId).classList.remove('active');
 };
 
-window.addToCart = function(id) {
+window.updateCartTotal = function () {
+    const isDiscountChecked = document.getElementById('memberDiscountCheck').checked;
+
+    const finalTotal = (isDiscountChecked && !hasUsedDiscount) ? cartTotal * 0.9 : cartTotal;
+
+    document.getElementById('cartTotal').innerText = `€${finalTotal.toFixed(2)}`;
+};
+
+window.addToCart = function (id) {
     const meal = allMeals.find(m => m.id === id);
     if (!meal) return;
 
     cartItems.push({ id: meal.id, name: meal.name, price: meal.price });
     cartTotal += meal.price;
-    
+
     document.getElementById('cartLabel').innerText = `${cartItems.length} items`;
-    document.getElementById('cartTotal').innerText = `€${cartTotal.toFixed(2)}`;
+
+    if (hasUsedDiscount) {
+        document.getElementById('discountContainer').style.display = 'none';
+    }
+
+    updateCartTotal();
     document.getElementById('floatingCart').classList.add('active');
 };
 
-window.processCart = function() {
+window.processCart = function () {
+    const isDiscountChecked = document.getElementById('memberDiscountCheck').checked;
+    const finalTotal = (isDiscountChecked && !hasUsedDiscount) ? cartTotal * 0.9 : cartTotal;
+
+    if (isDiscountChecked && !hasUsedDiscount) {
+        localStorage.setItem('shokids_discount_used', 'true');
+    }
+
     if (isSubMode) {
         localStorage.setItem('shokids_subscription', 'true');
-        localStorage.setItem('shokids_sub_total', cartTotal.toFixed(2));
+        localStorage.setItem('shokids_sub_total', finalTotal.toFixed(2));
         localStorage.setItem('shokids_sub_items', JSON.stringify(cartItems));
         localStorage.removeItem('shokids_build_mode');
         window.location.href = 'profile.html';
     } else {
         localStorage.setItem('shokids_active_order', 'true');
-        localStorage.setItem('shokids_order_total', cartTotal.toFixed(2));
+        localStorage.setItem('shokids_order_total', finalTotal.toFixed(2));
         window.location.href = 'tracking.html';
     }
 };

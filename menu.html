@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shokids | Menu</title>
+    <title>SHOKIDS | Menu</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -40,11 +40,18 @@
     </div>
 
     <div class="floating-cart" id="floatingCart">
-        <div>
-            <div id="cartLabel" style="font-size: 0.85rem; color: #b3b3b3;">0 items</div>
-            <div id="cartTotal" style="font-size: 1.2rem; font-weight: 700;">€0.00</div>
+        <label class="discount-banner" id="discountContainer">
+            <input type="checkbox" id="memberDiscountCheck" onchange="updateCartTotal()">
+            <span>🎁 Become our member and get 10% off your first order!</span>
+        </label>
+
+        <div class="cart-bottom-row">
+            <div>
+                <div id="cartLabel" style="font-size: 0.85rem; color: #b3b3b3;">0 items</div>
+                <div id="cartTotal" style="font-size: 1.2rem; font-weight: 700;">€0.00</div>
+            </div>
+            <button id="cartActionBtn" class="btn btn-pink" onclick="processCart()">Place Order</button>
         </div>
-        <button id="cartActionBtn" class="btn btn-pink" onclick="processCart()">Place Order</button>
     </div>
 
     <div class="modal-overlay" id="mealModal">
@@ -66,8 +73,9 @@
     </div>
 
     <div class="bottom-nav">
-        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="menu.html" class="nav-link">Menu</a>
         <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="about.html" class="nav-link">About Us</a>
         <a href="profile.html" class="nav-link">Profile</a>
     </div>
 
